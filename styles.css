@@ -1,0 +1,103 @@
+/*CSS background from https://css-pattern.com/ */
+html {
+    --s: 140px; /* control the size */
+    
+    --_g: #0000 52%,#B4869F /* first color */ 54% 57%,#0000 59%; 
+    background: 
+     radial-gradient(farthest-side at -33.33% 50%,var(--_g)) 0 calc(var(--s)/2),
+     radial-gradient(farthest-side at 50% 133.33%,var(--_g)) calc(var(--s)/2) 0,
+     radial-gradient(farthest-side at 133.33% 50%,var(--_g)),
+     radial-gradient(farthest-side at 50% -33.33%,var(--_g)),
+     #985F6F; /* second color */
+    background-size: calc(var(--s)/4.667) var(--s),var(--s) calc(var(--s)/4.667);
+  }
+
+  @font-face {
+    font-family: superfuntime;
+    src: url(fonts/SuperFuntime-3zpLX.ttf);
+  }
+
+  body {color:#212121;}
+
+/*text styles*/
+h1 {
+    font-family: superfuntime;
+    font-size: 40pt;
+    color: #B4869F;
+    text-align: left;
+    line-height:30px;
+    -webkit-text-stroke: .75px #985F6F;
+        text-shadow:
+             3px 3px 0 #A6B1E1,
+           -1px -1px 0 #A6B1E1,  
+            1px -1px 0 #A6B1E1,
+            -1px 1px 0 #A6B1E1,
+             1px 1px 0 #A6B1E1;
+}
+
+h2 {    font-family: superfuntime;
+    font-size: 30pt;
+    color: #DCD6F7;
+    text-align: right;
+    line-height: 20px;
+    -webkit-text-stroke: .75px #985F6F;
+        text-shadow:
+             3px 3px 0 #B4869F,
+           -1px -1px 0 #B4869F,  
+            1px -1px 0 #B4869F,
+            -1px 1px 0 #B4869F,
+             1px 1px 0 #B4869F;}
+
+p {
+    text-align:justify;
+    text-indent: 50px;
+    line-height: 20px;   /* within paragraph */margin-bottom: 5px; /* between paragraphs */
+        }
+
+
+/*div styles*/
+.outermost {
+    border-radius: 0% 10% 0% 10%;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #DCD6F7;
+    padding: 2rem;
+    padding-top:0;
+    height: 85%;
+    width:50%
+}
+
+.middiv {
+    border-radius: 0% 10% 0% 10%;
+    position: relative;
+    background-color: #A6B1E1;
+    margin: 1rem;
+    padding:1rem;
+    max-height:80%;
+}
+
+.innerdiv {    overflow-y: scroll;
+    margin: 1rem;
+    padding:1rem;
+    max-height: 50%;}
+
+/*scrollbar styles*/
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color:#DCD6F7;
+}
